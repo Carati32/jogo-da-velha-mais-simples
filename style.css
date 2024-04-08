@@ -44,5 +44,8 @@ hr {
     cursor: pointer;
     font-size: 50px;
     background: white;
+    
 }
-
+.creeper{
+    background: none;    
+}

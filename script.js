@@ -1,7 +1,7 @@
 const currentPlayer = document.querySelector(".currentPlayer")
 
 let selected;
-let player = "X";
+let player = "X"
 
 let positions = [
     [1, 2, 3],
@@ -12,11 +12,12 @@ let positions = [
     [3, 6, 9],
     [1, 5, 9],
     [3, 5, 7],
-];
+]
+
 function init() {
     selected = []
 
-    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`
 
     document.querySelectorAll(".game button").forEach((item) => {
         item.innerHTML = "";
@@ -28,10 +29,9 @@ function init() {
 init()
 function newMove(e) {
     const index = e.target.getAttribute("data-i")
-    e.target.innerHTML = player;
+    e.target.innerHTML = player
     e.target.removeEventListener("click", newMove)
-    selected[index] = player;
-
+    selected[index] = player
     setTimeout(() => {
         check()
     },  [100])
@@ -61,4 +61,11 @@ function check() {
         init()
         return
     }
+}
+
+var imgX = "Head Creeper.png"
+var imgO = "Head Ender.png"
+
+function trocar() {
+    document.getElementById("imagem").innerHTML = "<img scr= 'Fotos/Head Creeper.png'>"
 }
