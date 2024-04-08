@@ -21,6 +21,7 @@ function init() {
 
     document.querySelectorAll(".game button").forEach((item) => {
         item.innerHTML = "";
+        item.style.backgroundImage = "none"
         item.addEventListener("click", newMove)
         
     })
@@ -28,17 +29,30 @@ function init() {
 
 init()
 function newMove(e) {
-    const index = e.target.getAttribute("data-i")
-    e.target.innerHTML = player
-    e.target.removeEventListener("click", newMove)
-    selected[index] = player
-    setTimeout(() => {
-        check()
-    },  [100])
+    const index = e.target.getAttribute("data-i");
+    const button = e.target;
 
-    player = player === "X" ? "O" : "X"
-    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`
+    const img = document.createElement('img');
+    img.src = player === 'X' ? 'Fotos/Head Creeper.png' : 'Fotos/Head Ender.png';
+    img.className = 'player-image';
+    button.appendChild(img);
+    button.style.backgroundImage = "none"; // Remove qualquer imagem de fundo
+
+    e.target.removeEventListener("click", newMove);
+    selected[index] = player;
+
+    setTimeout(() => {
+        check();
+    }, 100);
+
+
+    player = player === "X" ? "O" : "X";
+    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
 }
+
+
+
+
 
 function check() {
     let playerLastMove = player === "X" ? "O" : "X"
@@ -63,9 +77,9 @@ function check() {
     }
 }
 
-var imgX = "Head Creeper.png"
-var imgO = "Head Ender.png"
 
 function trocar() {
-    document.getElementById("imagem").innerHTML = "<img scr= 'Fotos/Head Creeper.png'>"
+    var ximage = document.getElementById('x_image');
+
+    ximage.style.display = 'block';
 }
