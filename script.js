@@ -21,7 +21,7 @@ function init() {
 
     document.querySelectorAll(".game button").forEach((item) => {
         item.innerHTML = "";
-        item.style.backgroundImage = "none"
+        item.style.backgroundImage = "none"; // Remove qualquer imagem existente
         item.addEventListener("click", newMove)
         
     })
@@ -45,14 +45,9 @@ function newMove(e) {
         check();
     }, 100);
 
-
     player = player === "X" ? "O" : "X";
     currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
 }
-
-
-
-
 
 function check() {
     let playerLastMove = player === "X" ? "O" : "X"
