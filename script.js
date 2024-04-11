@@ -1,7 +1,7 @@
 const currentPlayer = document.querySelector(".currentPlayer")
 
 let selected;
-let player = "X"
+let player = "Creeper"
 
 let positions = [
     [1, 2, 3],
@@ -33,7 +33,7 @@ function newMove(e) {
     const button = e.target;
 
     const img = document.createElement('img');
-    img.src = player === 'X' ? 'Fotos/Head Creeper.png' : 'Fotos/Head Ender.png';
+    img.src = player === 'Creeper' ? 'Fotos/Head Creeper.png' : 'Fotos/Head Ender.png';
     img.className = 'player-image';
     button.appendChild(img);
     button.style.backgroundImage = "none"; // Remove qualquer imagem de fundo
@@ -45,12 +45,12 @@ function newMove(e) {
         check();
     }, 100);
 
-    player = player === "X" ? "O" : "X";
+    player = player === "Creeper" ? "Enderman" : "Creeper";
     currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
 }
 
 function check() {
-    let playerLastMove = player === "X" ? "O" : "X"
+    let playerLastMove = player === "Creeper" ? "Enderman" : "Creeper"
 
     const items = selected
     .map((item, i) => [item, i])
@@ -70,11 +70,4 @@ function check() {
         init()
         return
     }
-}
-
-
-function trocar() {
-    var ximage = document.getElementById('x_image');
-
-    ximage.style.display = 'block';
 }
