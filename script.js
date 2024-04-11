@@ -21,9 +21,7 @@ function init() {
 
     document.querySelectorAll(".game button").forEach((item) => {
         item.innerHTML = "";
-        item.style.backgroundImage = "none"; // Remove qualquer imagem existente
         item.addEventListener("click", newMove)
-        
     })
 }
 
@@ -45,12 +43,12 @@ function newMove(e) {
         check();
     }, 100);
 
-    player = player === "Creeper" ? "Enderman" : "Creeper";
+    player = player === "Creeper" ? "Ender" : "Creeper";
     currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
 }
 
 function check() {
-    let playerLastMove = player === "Creeper" ? "Enderman" : "Creeper"
+    let playerLastMove = player === "Creeper" ? "Ender" : "Creeper"
 
     const items = selected
     .map((item, i) => [item, i])

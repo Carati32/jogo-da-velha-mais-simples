@@ -2,7 +2,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: cursive;  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
 }
 
 body {
@@ -17,18 +17,17 @@ body {
 }   
 
 main {
-    display: flex;
+    display: flex; /*serve para se ajustar a tela*/
     flex-direction: column;
-    gap: 5px;
+    gap: 5px; /*define o espaçamento entre os elementos*/
 }
 h1 {
     text-align: center;
 }
 
 hr { 
-    font-weight: bold;
+    font-weight:  bold;
     height: 3px;
-    background: black;
     margin-bottom: 10px;
 }
 
