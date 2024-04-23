@@ -16,8 +16,8 @@ body {
 }   
 
 main {
-    display: flex; /*serve para se ajustar a tela*/
-    flex-direction: column;
+    display: flex; /*serve para os elementos se ajustar a tela*/
+    flex-direction: column; /*deixar os elementos um em cima do outro*/
     gap: 5px; /*define o espaçamento entre os elementos*/
 }
 h1 {
@@ -28,6 +28,7 @@ hr {
     font-weight:  bold;
     height: 3px;
     margin-bottom: 10px;
+    background-color: black;
 }
 
 .game {
@@ -39,7 +40,7 @@ hr {
     width: 100px;
     height: 100px;
     margin: 5px;
-    cursor: pointer;
+    cursor: pointer;  /* o cursor do mouse mudára para uma mãozinha quando passar sobre os botões*/
     font-size: 50px;
     background: white;
 }
@@ -48,5 +49,3 @@ hr {
 .player-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /*é utilizada para definir como uma imagem ou vídeo deve se ajustar dentro de seu HTML*/
-}
