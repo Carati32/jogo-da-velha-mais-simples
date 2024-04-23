@@ -1,19 +1,18 @@
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+  margin: 0%;  /* É usada para controlar o espaçamento externo do elemento em relação a outros elementos ou aos limites da janela do navegador.*/
+  padding: 0%; /*controla o espaço entre o conteúdo do elemento e sua borda.*/
+  box-sizing: border-box;/*O tamanho total inclui conteúdo, preenchimento e borda*/                                 
   font-family: cursive;  
 }
 
 body {
-    height: 100vh;
-    display: flex;
+    height: 100vh;/*área visível da janela do navegador*/
+    display: flex;/*Os elementos dentro do HTML se organizam em uma linha ou coluna*/
     align-items: center;
-    justify-content: center;
-    background-image: url(https://i.pinimg.com/736x/cb/d3/41/cbd34142d5cc761babe03d573d366fc6.jpg);
+    justify-content: center;/* colocar todos os elementos dentro de um HTML no meio horizontal*/
+    background-image: url(Fotos/Tela\ de\ fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
 }   
 
 main {
@@ -49,5 +48,5 @@ hr {
 .player-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /*é utilizada para definir como uma imagem ou vídeo deve se ajustar dentro de seu HTML*/
 }
