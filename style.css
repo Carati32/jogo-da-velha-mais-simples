@@ -54,32 +54,65 @@ hr {
 }
 
 
-#Creeperr {
+#Creeperr, #Enderman, #Wither, #EnderDragon {
     position: absolute;
     height: 40%;
-    left: 0px;
-    top: -1px;
- }
-
-#Enderman {
-    position: absolute;
-    height: 40%;
-    right: 0px;
-    top: -1px;
-
-}
-
-
-#Wither {
-    position: absolute;
-    height: 40%;
-    bottom: 0px;
-    left: 0px;
-}
-
-#EnderDragon {
-    position: absolute;
-    height: 40%;
-    bottom: 0px;
-    right: 0px;
-}
+  }
+  
+  /* Posições específicas */
+  #Creeperr {
+    left: 0;
+    top: 0;
+  }
+  
+  #Enderman {
+    right: 0;
+    top: 0;
+  }
+  
+  #Wither {
+    left: 0;
+    bottom: 0;
+  }
+  
+  #EnderDragon {
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Media queries para telas menores */
+  @media (max-width: 768px) {
+    #Creeperr, #Enderman, #Wither, #EnderDragon {
+      height: 20%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #Creeperr, #Enderman, #Wither, #EnderDragon {
+      height: 15%;
+      left: auto; /* Resetar posição */
+      right: auto; /* Resetar posição */
+      top: auto; /* Resetar posição */
+      bottom: auto; /* Resetar posição */
+    }
+  
+    #Creeperr {
+      top: 10px;
+      left: 10px;
+    }
+  
+    #Enderman {
+      top: 10px;
+      right: 10px;
+    }
+  
+    #Wither {
+      bottom: 10px;
+      left: 10px;
+    }
+  
+    #EnderDragon {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
